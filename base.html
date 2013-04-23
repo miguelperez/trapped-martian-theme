@@ -11,12 +11,17 @@
 
     <!-- Le styles -->
     
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.css" rel="stylesheet">
     <link href="./css/sticky-footer.css" rel="stylesheet">
     
     <style>
       body {
         padding-top: 20px;
+      }
+      
+      .navigation-bar{
+        margin-bottom: 20px;
+        margin-top: 42px;
       }
       
       .post-header{
@@ -65,10 +70,26 @@
     <div id="wrap">
 
       <div class="container">
-        <div class="page-header">
+        <!-- <div class="page-header">
           <h1>...Just a trapped Martian...</h1>
           <span>it is all that it is.</span>
+        </div> -->
+
+        <div class="page-header row">
+          <div class='span8'>
+            <h1>...Just a trapped Martian...</h1>
+            <span>it is all that it is.</span>
+          </div>
+          <div class='span3 ease-hide text-right'>
+            <a href='#'>home</a> :: <a href='#'>about</a> :: <a href="#searchModal" role="button" data-toggle="modal">search</a>
+          </div>
         </div>
+        
+        <!-- <div class="row navigation-bar">
+          <div class='span6 offset5 ease-hide text-right'>
+            <a href='#'>home</a> :: <a href='#'>about</a> :: <a href="#searchModal" role="button" data-toggle="modal">search</a>
+          </div>
+        </div> -->
       
         <section class='row'>
           <div class='post span8'>
@@ -98,7 +119,7 @@
             </div>
           </div>
           
-          <div id="sidebar span3 offset1">
+          <div id="sidebar" class='span3 offset1 ease-hide hidden-phone'>
             <div class="widget Label" id="Label1">
             <h2>Categories</h2>
             <div class="widget-content cloud-label-widget-content">
@@ -271,6 +292,20 @@
       
       </div> <!-- /container -->
       <div id='push'></div>
+    </div>
+    
+    <div id="searchModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Modal header</h3>
+      </div>
+      <div class="modal-body">
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary">Save changes</button>
+      </div>
     </div>
     
     <footer class="footer ease-hide">
